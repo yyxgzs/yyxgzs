@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head> 
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>夜夜想端口访问</title> <style> /* 公告栏样式 */ .announcement { background-color: #ff9900; color: #fff; text-align: center; padding: 10px; font-weight: bold; } </style> </head> <body> <div class="announcement"> <p>📢 重要通知：获取最新 域名/IP地址 请点击下方联系客服获取网站 域名/IP地址 ，ip地址每天更换如有需要请联系客服！！</p> </div> <!-- 其他网页内容 --> </body> </html>
+
+
+    
+</head>
+<body>
+
+<h1>夜夜想工作室端口访问表单</h1>
+
+<form id="port-form">
+    <label for="address">请填写域名/IP地址:</label>
+    <input type="text" id="address" name="address" required>
+    <br/>
+（注：IP地址每天更换请及时联系客服获取）
+  <br/>
+        <br/>
+    <label for="port">请选择要访问的网页:</label>
+    <select id="port" name="port">
+        <!-- 填充10个选项 -->
+        <option value="6012">导航网</option>
+        <option value="6017">易支付</option>
+        <option value="5011">alist网盘</option>
+        <option value="5010/kod/">可到云网盘</option>
+        <option value="5010">海纳思系统</option>
+        <option value="6010">宝塔面板</option>
+        <option value="6025">iptv直播</option>
+        <option value="6024">影视点播</option>
+        <option value="6018">博客</option>
+       <option value="6014">极速建站</option>
+        <option value="6015/admin/">站长统计</option>
+         <option value="6017/paypage/?merchant=4eafqljRsWCNzQW0Gkp43VSR3rCa6DQLJEigZ9EKBVlS">我要支付</option>
+         <option value="5010/kod/#s/97fxRNuA">临时文件</option>
+         <option value="6017/zfbhb/">支付宝红包</option>
+           <option value="7010/">宝塔面板-迷你</option>
+             <option value="7011/">易支付-迷你</option>
+                <option value="7012/">客户管理系统-迷你</option>
+
+
+
+
+
+
+
+
+        <!-- ... 其他端口... -->
+    </select>
+<br/>
+<br/><br/>
+    <button type="button" onclick="submitForm()">访问网站</button>
+</form>
+<br/><br/><br/>
+<a href="https://yyxgzs.gitee.io/yyxkf/">
+    <button>点击联系客服获取域名/Ip地址！</button>
+</a>
+<script>
+
+
+function submitForm() {
+    const address = document.getElementById("address").value;
+    const port = document.getElementById("port").value;
+
+    // 创建一个带端口的URL，但这并不能直接跳转，因为浏览器会阻止非标准端口的导航
+   const url = `http://${address}:${port}`;
+
+
+    // 下面这一行在实际情况下因同源策略而可能无效，除非服务器支持CORS
+    window.location.href = url;
+
+    // 在实际应用中，你可能需要通过服务器代理或者WebSocket、Fetch API等方式间接访问
+    console.log(`尝试跳转到: ${url}`);
+}
+</script>
+
+</body>
+</html>
